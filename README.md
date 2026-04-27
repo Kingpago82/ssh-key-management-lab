@@ -130,6 +130,20 @@ This lab aligns with roles such as:
 - Infrastructure security
 - Compliance alignment (NIST, IAM policies)
 
+Cost Optimization
+
+All resources were decommissioned after testing to prevent unnecessary cloud costs.
+
+```bash
+gcloud compute instances delete jump-host app-server-1 db-server-1 --zone=us-central1-a
+
+Rebuild Environment
+To recreate the lab environment:
+
+```bash
+chmod +x rebuild.sh
+./rebuild.sh
+
 ## Learning Outcomes
 - Understand SSH-based authentication
 - Implement secure access to cloud resources
