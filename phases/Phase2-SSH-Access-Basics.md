@@ -19,7 +19,6 @@ Establish secure SSH access to cloud virtual machines and understand how key-bas
 
 ### Connect to jump-host from Cloud Shell
 
-```bash
 gcloud compute ssh jump-host --zone=$ZONE
 
 ## Verify system identity
