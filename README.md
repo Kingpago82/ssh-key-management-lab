@@ -18,7 +18,7 @@ This lab demonstrates how to securely manage SSH keys for accessing virtual mach
 
 ## Architecture
 
-### BEFORE: Insecure Architecture
+## BEFORE: Insecure Architecture
 
 ![Before](architecture/architecture-before.png)
 
@@ -29,7 +29,7 @@ This lab demonstrates how to securely manage SSH keys for accessing virtual mach
 
 ---
 
-### AFTER: Secure Architecture
+## AFTER: Secure Architecture
 
 ![After](architecture/architecture-after.png)
 
@@ -53,7 +53,7 @@ This lab demonstrates how to securely manage SSH keys for accessing virtual mach
 
 ## Lab Setup
 
-### 1. Create VM
+## 1. Create VM
 
 - Navigate to **Compute Engine → VM Instances** 
 - Create a Linux VM 
@@ -61,12 +61,12 @@ This lab demonstrates how to securely manage SSH keys for accessing virtual mach
 
 ---
 
-### 2. Generate SSH Keys
+## 2. Generate SSH Keys
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C your-email@example.com
 
-### SSH Key Generation Output
+## SSH Key Generation Output
 
 This creates:
 
@@ -75,7 +75,7 @@ This creates:
 
 ---
 
-### 3. Add Public Key to VM
+## 3. Add Public Key to VM
 
 ```bash
 cat ~/.ssh/id_rsa.pub
@@ -85,11 +85,11 @@ cat ~/.ssh/id_rsa.pub
 - VM metadata
 - OR OS Login
 
-### 4.Connect via SSH
+## 4.Connect via SSH
 
 ssh username@EXTERNAL_IP
 
-### Security Best Practices
+## Security Best Practices
 - Never share private keys
 - Use passphrases for SSH keys
 - Rotate keys regularly
@@ -99,25 +99,25 @@ ssh username@EXTERNAL_IP
 
 In production systems, credentials should not be stored in plaintext. Use secure storage solutions.
 
-### Key Concepts
+## Key Concepts
 Identity & Access Control
 
 SSH keys replace passwords, reducing brute-force attack risks.
 
-### Workload Security
+## Workload Security
 
 Cloud workloads must be secured using proper controls aligned with frameworks like NIST.
 
 - Workloads are composed of services supporting business needs
 - Controls such as access restrictions and encryption enforce security posture
 
-### Common Misconfigurations
+## Common Misconfigurations
 - Storing private keys in public repositories
 - Using the same key across multiple users
 - Not restricting IP access
 - Lack of audit logging
 
-### Real-World Relevance
+## Real-World Relevance
 
 This lab aligns with roles such as:
 
@@ -125,12 +125,12 @@ This lab aligns with roles such as:
 - DevOps Engineer
 - Site Reliability Engineer
 
-### Key Skills Demonstrated
+## Key Skills Demonstrated
 - Secure access management
 - Infrastructure security
 - Compliance alignment (NIST, IAM policies)
 
-### Learning Outcomes
+## Learning Outcomes
 - Understand SSH-based authentication
 - Implement secure access to cloud resources
 - Apply security controls to cloud workloads
